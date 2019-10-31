@@ -909,10 +909,6 @@ static int libuboot_load(struct uboot_ctx *ctx)
 		}
 	}
 
-#if !defined(NDEBUG)
-	fprintf(stdout, "Environment %s, copy %d\n",
-			ctx->valid ? "OK" : "WRONG", ctx->current);
-#endif
 
 	data = (uint8_t *)(buf[ctx->current] + offsetdata);
 
@@ -951,9 +947,6 @@ static int libuboot_load(struct uboot_ctx *ctx)
 	char *pvar;
 	char *pval;
 	if (flagsvar) {
-#if !defined(NDEBUG)
-	fprintf(stdout, "Environment FLAGS %s\n", flagsvar);
-#endif
 		pvar = flagsvar;
 
 		while (*pvar && (pvar - flagsvar) < strlen(flagsvar)) {
