@@ -1,0 +1,13 @@
+Source: libubootenv
+Maintainer: Jimmy Chen <jimmy.chen@moxa.com>
+Section: misc
+Priority: optional
+Standards-Version: 1.0.1
+Build-Depends: debhelper (>= 8.0.0)
+Homepage: http://www.moxa.com
+
+Package: libubootenv
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Pre-Depends}
+Pre-Depends: zlib1g-dev (>= 1.2.0), libjson-c3 (>= 0.12.0)
+Description: uboot library for dlm-enrollment
