@@ -48,6 +48,11 @@ Recipe is provided in meta-swupdate layer https://github.com/sbabic/meta-swupdat
 Buildroot support
 -----------------
 
+Debian build support
+-----------------
+ARMHF = #dpkg-buildpackage -us -uc -b -aarmhf
+ANY = #dpkg-buildpackage -us -uc -b
+
 Package is provided in https://git.buildroot.net/buildroot/tree/package/libubootenv
 
 Contributing to the project
